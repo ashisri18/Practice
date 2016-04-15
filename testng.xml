@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <parameter name="pdfngreport-properties" value="../Practice/pdfngreport.properties" />
+    <listeners>
+        
+ 		 <listener class-name="atu.testng.reports.listeners.ATUReportsListener"></listener>
+		 <listener class-name="atu.testng.reports.listeners.ConfigurationListener"></listener>
+		 <listener class-name="atu.testng.reports.listeners.MethodListener"></listener>
+
+    	<listener class-name="com.uttesh.pdfngreport.PDFReportListener" />           
+    </listeners>
+        
+  <test name="Test">
+    <classes>
+      <class name="seleniumPractice.JScriptExecutor"/>  
+      <class name="seleniumPractice.JavaRobotClass"/>
+      <class name="seleniumPractice.AutoIT"/>
+      <class name="seleniumAssignment.ToDoFullScreenF11"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
