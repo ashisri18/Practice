@@ -10,30 +10,7 @@
   </listeners>
   <test name="Test">
     <classes>
-      <class name="seleniumPractice.JScriptExecutor"/>
-      <class name="seleniumPractice.JavaRobotClass"/>
-      <class name="seleniumPractice.AutoIT"/>
-      <class name="seleniumAssignment.ToDoFullScreenF11"/>
+      <class name="seleniumAssignment.VerifyElement"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <classes>
-      <class name="seleniumPractice.AutoIT">
-        <methods>
-          <include name="uploadFile"/>
-        </methods>
-      </class> <!-- seleniumPractice.AutoIT -->
-      <class name="seleniumPractice.JScriptExecutor">
-        <methods>
-          <include name="tearDown"/>
-          <include name="driverInitialization"/>
-        </methods>
-      </class> <!-- seleniumPractice.JScriptExecutor -->
-      <class name="seleniumPractice.JavaRobotClass">
-        <methods>
-          <include name="useKeyboard"/>
-        </methods>
-      </class> <!-- seleniumPractice.JavaRobotClass -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

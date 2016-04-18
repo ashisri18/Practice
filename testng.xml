@@ -13,10 +13,8 @@
         
   <test name="Test">
     <classes>
-      <class name="seleniumPractice.JScriptExecutor"/>  
-      <class name="seleniumPractice.JavaRobotClass"/>
-      <class name="seleniumPractice.AutoIT"/>
-      <class name="seleniumAssignment.ToDoFullScreenF11"/>
+     
+      <class name="seleniumAssignment.VerifyElement"/>
       
     </classes>
   </test> <!-- Test -->

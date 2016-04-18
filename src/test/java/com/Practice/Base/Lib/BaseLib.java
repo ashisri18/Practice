@@ -72,6 +72,6 @@ public class BaseLib {
 	public void tearDown(){
 		BaseLib.report.endTest(BaseLib.logger);
 		BaseLib.report.flush();
-		driver.get("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_ExtentReport\\Sample_ExtentReport.html");
+	//	driver.get("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_ExtentReport\\Sample_ExtentReport.html");
 	}
 }
