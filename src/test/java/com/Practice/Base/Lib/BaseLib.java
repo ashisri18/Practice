@@ -28,30 +28,26 @@ public class BaseLib {
 	@BeforeTest
 	public void driverInitialization() throws IOException{
 		
-		/*File file = new File("../Practice/config.properties");
+		File file = new File("../Practice/config.properties");
 		FileInputStream fis = null;
 		fis = new FileInputStream(file);
 		Properties prop = new Properties();
 		prop.load(fis);
-		if(prop.getProperty("Browser")== "Firefox"){
+		if(prop.getProperty("Browser").equalsIgnoreCase("Firefox")){
 			driver = new FirefoxDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		}else if (prop.getProperty("Browser")=="Chrome") {
+		}else if (prop.getProperty("Browser").equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "../Practice/src/test/resources/chromedriver.exe");
 			driver = new ChromeDriver();
-			
-		}else if (prop.getProperty("Browser")=="IE") {
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}else if (prop.getProperty("Browser").equalsIgnoreCase("ie")){
 			System.setProperty("webdriver.ie.driver", "../Practice/src/test/resources/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
-		}*/
-		
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}
+	// create object for ExtentReports class.	
 		report = new ExtentReports("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_ExtentReport\\Sample_ExtentReport.html", false);
-//		logger = report.startTest("Practice Extent Report");
-		
-		System.setProperty("webdriver.chrome.driver", "../Practice/src/test/resources/chromedriver.exe");
-		driver = new ChromeDriver();
-		
-//		logger.log(LogStatus.INFO, "Browser started ");
+
 		
 	//Set Property for ATU Reporter Configuration
 		{
@@ -61,11 +57,11 @@ public class BaseLib {
 		ATUReports.setWebDriver(driver);
         setIndexPageDescription();
         
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
 	}
 	
 	private void setIndexPageDescription() {
-        ATUReports.indexPageDescription = "My Project Description";
+        ATUReports.indexPageDescription = "Selenium Practice Project";
  }
 	
 	@AfterTest

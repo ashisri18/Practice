@@ -22,10 +22,15 @@ public class VerifyElement extends BaseLib{
 		driver.findElement(By.id("lst-ib")).click();
 		driver.findElement(By.id("lst-ib")).sendKeys("flipkart",Keys.ENTER);
 		Thread.sleep(2000);
+		
+//  Open link in New Tab.	(Using Ctrl+click)			
 		Actions act = new Actions(driver);
 		WebElement wb = driver.findElement(By.xpath("//h3/a[text()='Flipkart']"));
-		
-//  Open link in New Tab.		
+		act.sendKeys(wb, Keys.CONTROL).perform();
+	//	wb.click();
+		Thread.sleep(2000);
+		System.out.println("Link opened in new tab using ctrl+click");
+	//		********   OR     *****  
 		/*act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.TAB).perform();
@@ -36,14 +41,19 @@ public class VerifyElement extends BaseLib{
 		Thread.sleep(500);
 		act.sendKeys(Keys.CONTROL).perform();
 		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(2000);*/
+	
+// Open Link in new tab using middle button(scroll button) of mouse.
+		act.sendKeys(wb, Keys.SHIFT).perform();
+	//	wb.click();
 		Thread.sleep(2000);
-	//	********   OR     *****  */
-		
-		act.sendKeys(Keys.CONTROL).perform();
-		wb.click();
+		System.out.println("Link opened in new tab by clicking on scroll button of mouse.");
+// open a link in new browser using (shift+click)
+		act.sendKeys(wb, Keys.SHIFT).perform();
+//		wb.click();
 		Thread.sleep(2000);
-		
-//  Minimize and Maximize windows using Robot class.	
+		System.out.println("Link opened in new browser using shift+click");
+//  Minimize and Maximize windows using shortcut (windows+d) and Robot class.	
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_WINDOWS);
 		robot.keyPress(KeyEvent.VK_D);
@@ -55,6 +65,8 @@ public class VerifyElement extends BaseLib{
 		robot.keyRelease(KeyEvent.VK_D);
 		robot.keyRelease(KeyEvent.VK_WINDOWS);
 		Thread.sleep(2000);
+		
+//  Open a blank new browser. (ctrl+n)		
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_N);
 		robot.keyRelease(KeyEvent.VK_CONTROL);

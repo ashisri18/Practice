@@ -29,7 +29,7 @@ public class TestNGListener implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
-		this.driver = ((AutoIT)result.getInstance()).driver;
+		this.driver = ((FileUpload_AutoIT)result.getInstance()).driver;
 		File imgscr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(imgscr, new File("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_PdfReport\\AutoIT_uploadFile.png"));
