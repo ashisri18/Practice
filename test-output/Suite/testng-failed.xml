@@ -10,7 +10,19 @@
   </listeners>
   <test name="Test">
     <classes>
-      <class name="seleniumAssignment.VerifyElement"/>
+      <class name="seleniumPractice.PageScroll"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="seleniumPractice.PageScroll">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="tearDown"/>
+          <include name="scrollingToBottomofAPage"/>
+          <include name="driverInitialization"/>
+        </methods>
+      </class> <!-- seleniumPractice.PageScroll -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -14,7 +14,7 @@
   <test name="Test">
     <classes>
      
-      <class name="seleniumAssignment.VerifyElement"/>
+      <class name="seleniumPractice.PageScroll"/>
       
     </classes>
   </test> <!-- Test -->

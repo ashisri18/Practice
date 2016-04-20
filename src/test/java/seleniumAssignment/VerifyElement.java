@@ -27,10 +27,11 @@ public class VerifyElement extends BaseLib{
 		Actions act = new Actions(driver);
 		WebElement wb = driver.findElement(By.xpath("//h3/a[text()='Flipkart']"));
 		act.sendKeys(wb, Keys.CONTROL).perform();
-	//	wb.click();
+		wb.click();
 		Thread.sleep(2000);
 		System.out.println("Link opened in new tab using ctrl+click");
-	//		********   OR     *****  
+		
+	//		********   OR     *****  	
 		/*act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.TAB).perform();
@@ -42,12 +43,23 @@ public class VerifyElement extends BaseLib{
 		act.sendKeys(Keys.CONTROL).perform();
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(2000);*/
-	
-// Open Link in new tab using middle button(scroll button) of mouse.
+		
+// Open Link in new tab using Right click and click on open link in new Tab(or pass "T").
+		act.contextClick(wb).perform();
+		Thread.sleep(1000);
+		act.sendKeys("T").perform();
+		
+// Open Link in new tab using Right click, click on right arrow and press Enter.
+		act.contextClick(wb).perform();
+		Thread.sleep(1000);
+		act.sendKeys(Keys.ARROW_RIGHT).sendKeys(Keys.ENTER).build().perform();		// We can remove build() function.
+		
+// Open Link in new tab using middle button(scroll button) of mouse.		(Not Working)
 		act.sendKeys(wb, Keys.SHIFT).perform();
 	//	wb.click();
 		Thread.sleep(2000);
 		System.out.println("Link opened in new tab by clicking on scroll button of mouse.");
+
 // open a link in new browser using (shift+click)
 		act.sendKeys(wb, Keys.SHIFT).perform();
 //		wb.click();

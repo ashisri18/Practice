@@ -3,18 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="seleniumAssignment.VerifyElement"/>
+      <class name="seleniumPractice.SwitchWindows"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="seleniumAssignment.VerifyElement">
+      <class name="seleniumPractice.SwitchWindows">
         <methods>
-          <include name="tearDown"/>
-          <include name="UsingFindElementMethod"/>
+          <include name="switchWindows"/>
           <include name="driverInitialization"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- seleniumAssignment.VerifyElement -->
+      </class> <!-- seleniumPractice.SwitchWindows -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

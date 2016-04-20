@@ -37,7 +37,7 @@ public class FileUpload_AutoIT extends BaseLib{
 		driver.findElement(By.xpath("//span[contains(text(),'Stay signed in')]")).click();
 		logger.log(LogStatus.INFO, "Check box unchecked.");
 		Thread.sleep(2000);
-		driver.findElement(By.id("Passwd")).sendKeys("jai$sri$ram");
+		driver.findElement(By.id("Passwd")).sendKeys("");
 		driver.findElement(By.id("signIn")).click();
 		logger.log(LogStatus.INFO, "Password entered.");
 		Thread.sleep(5000);

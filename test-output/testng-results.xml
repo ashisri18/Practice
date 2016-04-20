@@ -2,36 +2,38 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31979" started-at="2016-04-19T12:53:53Z" finished-at="2016-04-19T12:54:25Z">
+  <suite name="Default suite" duration-ms="30211" started-at="2016-04-20T12:50:21Z" finished-at="2016-04-20T12:50:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31979" started-at="2016-04-19T12:53:53Z" finished-at="2016-04-19T12:54:25Z">
-      <class name="seleniumAssignment.VerifyElement">
-        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:seleniumAssignment.VerifyElement@57fffcd7]" name="driverInitialization" is-config="true" duration-ms="7802" started-at="2016-04-19T18:23:53Z" finished-at="2016-04-19T18:24:01Z">
+    <test name="Default test" duration-ms="30211" started-at="2016-04-20T12:50:21Z" finished-at="2016-04-20T12:50:52Z">
+      <class name="seleniumPractice.SwitchWindows">
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:seleniumPractice.SwitchWindows@31ef45e3]" name="driverInitialization" is-config="true" duration-ms="8131" started-at="2016-04-20T18:20:21Z" finished-at="2016-04-20T18:20:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitialization -->
-        <test-method status="FAIL" signature="UsingFindElementMethod()[pri:0, instance:seleniumAssignment.VerifyElement@57fffcd7]" name="UsingFindElementMethod" duration-ms="23926" started-at="2016-04-19T18:24:01Z" finished-at="2016-04-19T18:24:25Z">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method status="FAIL" signature="switchWindows()[pri:1, instance:seleniumPractice.SwitchWindows@31ef45e3]" name="switchWindows" duration-ms="21802" started-at="2016-04-20T18:20:30Z" finished-at="2016-04-20T18:20:51Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 13.67 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//div[div[h2[text()='Footwear for Men & Women']]]/following-sibling::div//div[text()='Casual shoes']/preceding-sibling::div[2]//div/img"}
+Command duration or timeout: 11.36 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'CBT-Test', ip: '10.10.10.224', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 01c19686-0813-4d00-8836-de58ca0963c9]]>
+Session ID: afb3f165-6e9c-4a80-8646-f277ecb3dfb5
+*** Element info: {Using=xpath, value=//div[div[h2[text()='Footwear for Men & Women']]]/following-sibling::div//div[text()='Casual shoes']/preceding-sibling::div[2]//div/img}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 13.67 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[div[h2[text()='Footwear for Men & Women']]]/following-sibling::div//div[text()='Casual shoes']/preceding-sibling::div[2]//div/img"}
+Command duration or timeout: 11.36 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'CBT-Test', ip: '10.10.10.224', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 01c19686-0813-4d00-8836-de58ca0963c9
+Session ID: afb3f165-6e9c-4a80-8646-f277ecb3dfb5
+*** Element info: {Using=xpath, value=//div[div[h2[text()='Footwear for Men & Women']]]/following-sibling::div//div[text()='Casual shoes']/preceding-sibling::div[2]//div/img}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -39,15 +41,11 @@ Session ID: 01c19686-0813-4d00-8836-de58ca0963c9
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
-	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
-	at org.openqa.selenium.remote.RemoteMouse.moveIfNeeded(RemoteMouse.java:52)
-	at org.openqa.selenium.remote.RemoteMouse.click(RemoteMouse.java:57)
-	at org.openqa.selenium.interactions.internal.KeysRelatedAction.focusOnElement(KeysRelatedAction.java:39)
-	at org.openqa.selenium.interactions.SendKeysAction.perform(SendKeysAction.java:47)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:373)
-	at seleniumAssignment.VerifyElement.UsingFindElementMethod(VerifyElement.java:47)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at seleniumPractice.SwitchWindows.switchWindows(SwitchWindows.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,28 +70,24 @@ Session ID: 01c19686-0813-4d00-8836-de58ca0963c9
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[div[h2[text()='Footwear for Men & Women']]]/following-sibling::div//div[text()='Casual shoes']/preceding-sibling::div[2]//div/img"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'CBT-Test', ip: '10.10.10.224', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9039)
-	at <anonymous class>.fxdriver.events.buildCoordinates(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10275)
-	at <anonymous class>.FirefoxDriver.prototype.mouseMoveTo(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11068)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3648975870968065186webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3648975870968065186webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UsingFindElementMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:seleniumAssignment.VerifyElement@57fffcd7]" name="tearDown" is-config="true" duration-ms="234" started-at="2016-04-19T18:24:25Z" finished-at="2016-04-19T18:24:25Z">
+        </test-method> <!-- switchWindows -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:seleniumPractice.SwitchWindows@31ef45e3]" name="tearDown" is-config="true" duration-ms="266" started-at="2016-04-20T18:20:51Z" finished-at="2016-04-20T18:20:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- seleniumAssignment.VerifyElement -->
+      </class> <!-- seleniumPractice.SwitchWindows -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

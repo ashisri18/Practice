@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1290047943\testng-customsuite.xml</span>
+                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--2145670473\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="seleniumAssignment.VerifyElement" hash-for-method="UsingFindElementMethod">UsingFindElementMethod</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="seleniumPractice.SwitchWindows" hash-for-method="switchWindows">switchWindows</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,22 +120,23 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">seleniumAssignment.VerifyElement</span>
+              <span class="class-name">seleniumPractice.SwitchWindows</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="UsingFindElementMethod">
-                  </a> <!-- UsingFindElementMethod -->
-                  <span class="method-name">UsingFindElementMethod</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 13.67 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+                  <a name="switchWindows">
+                  </a> <!-- switchWindows -->
+                  <span class="method-name">switchWindows</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[div[h2[text()=&apos;Footwear for Men &amp; Women&apos;]]]/following-sibling::div//div[text()=&apos;Casual shoes&apos;]/preceding-sibling::div[2]//div/img&quot;}
+Command duration or timeout: 11.36 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;CBT-Test&apos;, ip: &apos;10.10.10.224&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_73&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 01c19686-0813-4d00-8836-de58ca0963c9
+Session ID: afb3f165-6e9c-4a80-8646-f277ecb3dfb5
+*** Element info: {Using=xpath, value=//div[div[h2[text()=&apos;Footwear for Men &amp; Women&apos;]]]/following-sibling::div//div[text()=&apos;Casual shoes&apos;]/preceding-sibling::div[2]//div/img}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -143,15 +144,11 @@ Session ID: 01c19686-0813-4d00-8836-de58ca0963c9
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
-	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
-	at org.openqa.selenium.remote.RemoteMouse.moveIfNeeded(RemoteMouse.java:52)
-	at org.openqa.selenium.remote.RemoteMouse.click(RemoteMouse.java:57)
-	at org.openqa.selenium.interactions.internal.KeysRelatedAction.focusOnElement(KeysRelatedAction.java:39)
-	at org.openqa.selenium.interactions.SendKeysAction.perform(SendKeysAction.java:47)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:373)
-	at seleniumAssignment.VerifyElement.UsingFindElementMethod(VerifyElement.java:47)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at seleniumPractice.SwitchWindows.switchWindows(SwitchWindows.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -176,17 +173,13 @@ Session ID: 01c19686-0813-4d00-8836-de58ca0963c9
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[div[h2[text()=&apos;Footwear for Men &amp; Women&apos;]]]/following-sibling::div//div[text()=&apos;Casual shoes&apos;]/preceding-sibling::div[2]//div/img&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;CBT-Test&apos;, ip: &apos;10.10.10.224&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_73&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
-	at &lt;anonymous class&gt;.Utils.getElementAt(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9039)
-	at &lt;anonymous class&gt;.fxdriver.events.buildCoordinates(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10275)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.mouseMoveTo(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11068)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous2776100077215622359webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3648975870968065186webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3648975870968065186webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -196,7 +189,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1290047943\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--2145670473\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -205,7 +198,7 @@ Driver info: driver.version: unknown
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;seleniumAssignment.VerifyElement&quot;/&gt;
+      &lt;class name=&quot;seleniumPractice.SwitchWindows&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -247,14 +240,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'UsingFindElementMethod')
-data.setCell(0, 2, 'seleniumAssignment.VerifyElement')
-data.setCell(0, 3, 23926);
+data.setCell(0, 1, 'switchWindows')
+data.setCell(0, 2, 'seleniumPractice.SwitchWindows')
+data.setCell(0, 3, 21802);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -280,7 +273,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">seleniumAssignment.VerifyElement</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">seleniumPractice.SwitchWindows</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">driverInitialization</span>
                 <span class="method-start">0 ms</span>
@@ -288,13 +281,13 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">UsingFindElementMethod</span>
-                <span class="method-start">7807 ms</span>
+                <span class="method-name">switchWindows</span>
+                <span class="method-start">8136 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">31743 ms</span>
-              </div> <!-- configuration-test after -->
+                <span class="method-start">29942 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
