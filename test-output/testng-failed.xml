@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="pdfngreport-properties" value="../Practice/pdfngreport.properties"/>
+  <listeners>
+    <listener class-name="com.Practice.Base.Lib.TestNGListener"/>
+    <listener class-name="atu.testng.reports.listeners.ATUReportsListener"/>
+    <listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
+    <listener class-name="atu.testng.reports.listeners.MethodListener"/>
+    <listener class-name="com.uttesh.pdfngreport.PDFReportListener"/>
+  </listeners>
+  <test name="Test">
     <classes>
       <class name="seleniumPractice.SwitchWindows"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="seleniumPractice.SwitchWindows">
-        <methods>
-          <include name="switchWindows"/>
-          <include name="driverInitialization"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- seleniumPractice.SwitchWindows -->
-    </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test -->
+</suite> <!-- Failed suite [Suite] -->

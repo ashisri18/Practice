@@ -22,7 +22,7 @@ public class PageScroll extends BaseLib{
 	
 	@BeforeMethod
 	public void openBrowser() throws InterruptedException{
-		setAuthorInfoReport();				// Report's Author info.
+	//	setAuthorInfoReport();				// Report's Author info.
 		
 		driver.get("http://flipkart.com");
 		driver.manage().window().maximize();
@@ -31,7 +31,7 @@ public class PageScroll extends BaseLib{
 	
 	@Test(priority=1, enabled= true)
 	public void scrollingToBottomofAPage() throws InterruptedException{
-	
+		setAuthorInfoReport();
 		logger = report.startTest("Scroll to Bottom");
 // Page Scrolling using JavascriptExecutor:-			(Working)
 		JavascriptExecutor jse = ((JavascriptExecutor)driver);
@@ -51,7 +51,7 @@ public class PageScroll extends BaseLib{
 	
 	@Test(priority=2, enabled=false)
 	public void scrollingToElementofAPage() throws InterruptedException{
-		
+		setAuthorInfoReport();
 		logger = report.startTest("Scroll to Element");
 // Page Scrolling using JavascriptExecutor:-
 // Scroll till text:-								(Working)
@@ -78,7 +78,7 @@ public class PageScroll extends BaseLib{
 	
 	@Test(priority=3, enabled=false)
 	public void scrollingByCoordinatesofAPage() throws InterruptedException{
-		
+		setAuthorInfoReport();
 		logger = report.startTest("Scroll by coordinate");
 // Page scrolling using JavascriptExecutor:-		(Working)
 		JavascriptExecutor jse = ((JavascriptExecutor)driver);

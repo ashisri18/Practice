@@ -3,6 +3,7 @@
 <suite name="Suite">
     <parameter name="pdfngreport-properties" value="../Practice/pdfngreport.properties" />
     <listeners>
+        <listener class-name="com.Practice.Base.Lib.TestNGListener"></listener>
         
  		 <listener class-name="atu.testng.reports.listeners.ATUReportsListener"></listener>
 		 <listener class-name="atu.testng.reports.listeners.ConfigurationListener"></listener>
@@ -14,7 +15,7 @@
   <test name="Test">
     <classes>
      
-      <class name="seleniumPractice.PageScroll"/>
+      <class name="seleniumPractice.SwitchWindows"/>
       
     </classes>
   </test> <!-- Test -->

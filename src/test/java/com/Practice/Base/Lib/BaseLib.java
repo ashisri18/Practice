@@ -57,7 +57,6 @@ public class BaseLib {
 		ATUReports.setWebDriver(driver);
         setIndexPageDescription();
         
-        
 	}
 	
 	private void setIndexPageDescription() {
@@ -66,8 +65,9 @@ public class BaseLib {
 	
 	@AfterTest
 	public void tearDown(){
-		report.endTest(logger);
-		report.flush();
-	//	driver.get("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_ExtentReport\\Sample_ExtentReport.html");
+		driver.quit();
+	//	report.endTest(logger);
+	//	report.flush();
+		driver.get("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_ExtentReport\\Sample_ExtentReport.html");
 	}
 }

@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="pdfngreport-properties" value="../Practice/pdfngreport.properties"/>
   <listeners>
+    <listener class-name="com.Practice.Base.Lib.TestNGListener"/>
     <listener class-name="atu.testng.reports.listeners.ATUReportsListener"/>
     <listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
     <listener class-name="atu.testng.reports.listeners.MethodListener"/>
@@ -10,19 +11,7 @@
   </listeners>
   <test name="Test">
     <classes>
-      <class name="seleniumPractice.PageScroll"/>
+      <class name="seleniumPractice.SwitchWindows"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <classes>
-      <class name="seleniumPractice.PageScroll">
-        <methods>
-          <include name="openBrowser"/>
-          <include name="tearDown"/>
-          <include name="scrollingToBottomofAPage"/>
-          <include name="driverInitialization"/>
-        </methods>
-      </class> <!-- seleniumPractice.PageScroll -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
