@@ -9,7 +9,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Practice.Base.Lib.BaseLib;
-import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 
 import atu.testng.reports.ATUReports;

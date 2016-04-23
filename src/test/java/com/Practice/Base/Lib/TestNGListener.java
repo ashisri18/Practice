@@ -13,21 +13,19 @@ import org.testng.ITestResult;
 import com.relevantcodes.extentreports.LogStatus;
 
 
-public class TestNGListener implements ITestListener {
+public class TestNGListener implements ITestListener{
 
-	@Override
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
+		
+	//	String methodName = result.getMethod().getMethodName();
 		
 	}
 
-	@Override
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
-	@Override
 	public void onTestFailure(ITestResult result) {
 		
 		String instanceName =result.getInstanceName();
@@ -35,7 +33,7 @@ public class TestNGListener implements ITestListener {
 		String methodName = result.getMethod().getMethodName();
 		EventFiringWebDriver eDriver = new EventFiringWebDriver(BaseLib.driver);
 		File srcImg = eDriver.getScreenshotAs(OutputType.FILE);
-		String destImg_path = "D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_PdfReport\\"+className+"_"+methodName+".png";
+		String destImg_path = "../Practice/Report/Practice_PdfReport//"+className+"_"+methodName+".png";
 		File destImg = new File(destImg_path);
 		try {
 			FileUtils.copyFile(srcImg, destImg);
@@ -49,25 +47,21 @@ public class TestNGListener implements ITestListener {
 		BaseLib.logger.log(LogStatus.FAIL, methodName+" method has been failed", image);
 	}
 
-	@Override
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
 		

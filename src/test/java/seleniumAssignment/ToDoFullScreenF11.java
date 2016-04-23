@@ -1,7 +1,6 @@
 package seleniumAssignment;
 
 import java.awt.AWTException;
-import java.awt.RenderingHints.Key;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 

@@ -2,7 +2,6 @@ package com.Practice.Base.Lib;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -16,14 +15,13 @@ import org.testng.annotations.BeforeTest;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
 import atu.testng.reports.ATUReports;
 
 public class BaseLib { 
 	public static ExtentReports report;
 	public static ExtentTest logger;
 	public static WebDriver driver;
+	public static Properties prop ;
 	
 	@BeforeTest
 	public void driverInitialization() throws IOException{
@@ -31,7 +29,7 @@ public class BaseLib {
 		File file = new File("../Practice/config.properties");
 		FileInputStream fis = null;
 		fis = new FileInputStream(file);
-		Properties prop = new Properties();
+		prop = new Properties();
 		prop.load(fis);
 		if(prop.getProperty("Browser").equalsIgnoreCase("Firefox")){
 			driver = new FirefoxDriver();
@@ -46,7 +44,7 @@ public class BaseLib {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		}
 	// create object for ExtentReports class.	
-		report = new ExtentReports("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_ExtentReport\\Sample_ExtentReport.html", false);
+		report = new ExtentReports("../Practice/Report/Practice_ExtentReport/Sample_ExtentReport.html", false);
 
 		
 	//Set Property for ATU Reporter Configuration
@@ -66,8 +64,8 @@ public class BaseLib {
 	@AfterTest
 	public void tearDown(){
 		driver.quit();
-	//	report.endTest(logger);
-	//	report.flush();
-		driver.get("D:\\CBT_Automation\\Workspace\\Practice\\Report\\Practice_ExtentReport\\Sample_ExtentReport.html");
+	
+	
+		driver.get("../Practice/Report/Practice_ExtentReport/Sample_ExtentReport.html");
 	}
 }

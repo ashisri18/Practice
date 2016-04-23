@@ -14,4 +14,16 @@
       <class name="seleniumPractice.SwitchWindows"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="seleniumPractice.SwitchWindows">
+        <methods>
+          <include name="switchWindows"/>
+          <include name="reportSetup"/>
+          <include name="driverInitialization"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- seleniumPractice.SwitchWindows -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

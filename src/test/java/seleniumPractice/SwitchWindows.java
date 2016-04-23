@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -22,10 +23,17 @@ public class SwitchWindows extends BaseLib{
 		ATUReports.setAuthorInfo("Ashish Srivastava", Utils.getCurrentTime(), "1.0");
 	}
 	
+	@BeforeMethod
+	public void reportSetup(){
+		setAuthorInfoReport();
+		logger = report.startTest("Switch Windows");
+	}
+	
 	@Test(priority=1,enabled=true)
 	public void switchWindows() throws InterruptedException{
-		setAuthorInfoReport();
-		logger = report.startTest("switchWindows");
+		
+	//	setAuthorInfoReport();
+	//	logger = report.startTest("switchWindows");
 		
 		driver.get("http://flipkart.com");
 		driver.manage().window().maximize();
@@ -108,14 +116,14 @@ public class SwitchWindows extends BaseLib{
 	//	driver.findElement(By.xpath("//input[@type='submit' and @value='Search']")).click();
 		Thread.sleep(2000);
 		logger.log(LogStatus.PASS, "SwitchWindows method is pass.");
-		report.endTest(logger);
-		report.flush();
+	//	report.endTest(logger);
+	//	report.flush();
 	}
 	
 	@AfterMethod
 	public void tearDown(){
-	//	report.endTest(logger);
-	//	report.flush();
+		report.endTest(logger);
+		report.flush();
 	//	driver.close();
 	}
 
