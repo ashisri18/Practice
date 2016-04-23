@@ -40,6 +40,16 @@
 	<artifactId>extentreports</artifactId>
 	<version>2.40.2</version>
 	</dependency>
+	<dependency>
+	<groupId>com.ashi.sri18</groupId>
+	<artifactId>ATUReporter-selenium</artifactId>
+	<version>5.5B</version>
+	</dependency>
+	<dependency>
+	<groupId>com.ashi.sri18</groupId>
+	<artifactId>ATUTestRecorder</artifactId>
+	<version>2.1</version>
+	</dependency>
   </dependencies>
   
   <build>
@@ -60,7 +70,7 @@
           <version>2.19.1</version>
           <configuration>
           	<suitXmlFiles>
-          		<suiteXmlFile>E:\\Automation\\Workspace_Selenium\\Practice\\testng.xml</suiteXmlFile>
+          		<suiteXmlFile>testng.xml</suiteXmlFile>
           	</suitXmlFiles>
           </configuration>	
         </plugin>
