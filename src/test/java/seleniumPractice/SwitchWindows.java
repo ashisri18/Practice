@@ -17,7 +17,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import atu.testng.reports.ATUReports;
 import atu.testng.reports.utils.Utils;
-//@Listeners (com.Practice.Base.Lib.TestNGListener.class)
+@Listeners (com.Practice.Base.Lib.TestNGListener.class)
 public class SwitchWindows extends BaseLib{
 	public void setAuthorInfoReport(){
 		ATUReports.setAuthorInfo("Ashish Srivastava", Utils.getCurrentTime(), "1.0");
